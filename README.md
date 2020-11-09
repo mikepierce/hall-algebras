@@ -12,7 +12,8 @@ computes the Hall number for the short exact sequence 0 → B → X → A → 0.
 ## TODO
 
   - **Ultimate Goal** Write it to where, for a finite-type bound quiver,
-  I can literally get an [associative algbera](https://www.gap-system.org/Manuals/doc/ref/chap62.html#X7CC58DFD816E6B65) 
+  I can literally get an 
+  [associative algbera](https://www.gap-system.org/Manuals/doc/ref/chap62.html#X7CC58DFD816E6B65) 
   object in GAP that is the Hall algebra of the quiver, 
   and maybe so I can compare this algebra to some quantum groups using
   [QuaGroup](https://github.com/gap-packages/quagroup)
@@ -23,8 +24,10 @@ computes the Hall number for the short exact sequence 0 → B → X → A → 0.
 
   - Many of the functions could be sped up by taking an optional argument
   of the (finite) list of indecomposable modules over a path algebra.
+  So I could also write a function that calculates the indecomposables,
+  at least the ones generated as extensions of simple objects.
+  For which bound quivers will doing this get all the indecomposables?
 
-  - **Concern** In general I'm suspicious of `HallNumber()`'s accuracy. 
-  For HallNumber(S1,S1S2,S1S1S2) I calculated (q+1), but
-  q → output : 13->196  5->36  3->16 ... q → (q+1)²
+  - **Testing** Working with the function `HallNumber()` on quivers that I'm familiar with, 
+  I'm convinced it is correct, BUT it would be nice to have some tests to verify that it works.
     
